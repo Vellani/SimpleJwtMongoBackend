@@ -1,0 +1,20 @@
+spring:
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 5MB
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+  data:
+    mongodb:
+      uri: ${MONGO_DB_URL}
+      database: ${MONGO_DB_NAME}
+
+application:
+  jwt:
+    secret: ${HMACSHAKEY}
+    tokenPrefix: "Bearer "
+    tokenExpiration: 1800000
+
